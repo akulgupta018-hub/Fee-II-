@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeVerse</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(270deg, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: bgMove 10s infinite;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: float 6s infinite ease-in-out;
+}
+
+.c1 {
+    width: 220px;
+    height: 220px;
+    background: #ff6b6b;
+    top: 30%;
+    left: 10%;
+}
+
+.c2 {
+    width: 180px;
+    height: 180px;
+    background: #ffffff;
+    bottom: 20%;
+    right: 10%;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-box {
+    width: 340px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    animation: fade 1s ease;
+}
+
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.password-box {
+    position: relative;
+}
+
+.password-box input[type="checkbox"] {
+    display: none;
+}
+
+.pass {
+    display: block;
+}
+
+.text {
+    display: none;
+}
+
+#show:checked ~ .pass {
+    display: none;
+}
+
+#show:checked ~ .text {
+    display: block;
+}
+
+.password-box label {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, orange, #ff7b00);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px orange;
+}
+
+.forgot {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #ddd;
+}
+
+.signup {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.signup span {
+    color: yellow;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+
+<nav class="navbar">
+    <h1>CodeVerse</h1>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="login-box">
+
+        <h2>Welcome Back</h2>
+        <br>
+        <p>Login to continue</p>
+        <br>
+
+        <input type="email" placeholder="Email">
+
+        <div class="password-box">
+            <input type="checkbox" id="show">
+            
+            <input type="password" placeholder="Password" class="pass">
+            <input type="text" placeholder="Password" class="text">
+
+            <label for="show">👁</label>
+        </div>
+
+        <button>Login</button>
+
+        <a href="#" class="forgot">Forgot Password?</a>
+        <p class="signup">Don't have an account? <span>Sign Up</span></p>
+
+    </div>
+</div>
+
+</body>
+</html> 
