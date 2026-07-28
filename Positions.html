@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box {
+            display: flex;
+            background: #ddd;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .item {
+            background: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        /* 1. Flex Start */
+        .p1 { justify-content: flex-start; }
+
+        /* 2. Flex End */
+        .p2 { justify-content: flex-end; }
+
+        /* 3. Space Between */
+        .p3 { justify-content: space-between; }
+
+        /* 4. Space Around */
+        .p4 { justify-content: space-around; }
+
+        /* 5. Space Evenly */
+        .p5 { justify-content: space-evenly; }
+    </style>
+</head>
+<body>
+
+    <h3>1. flex-start</h3>
+    <div class="box p1">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h3>2. flex-end</h3>
+    <div class="box p2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h3>3. space-between</h3>
+    <div class="box p3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h3>4. space-around</h3>
+    <div class="box p4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+    <h3>5. space-evenly</h3>
+    <div class="box p5">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+
+</body>
+</html>
